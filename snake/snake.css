@@ -1,0 +1,51 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+.cont{
+	display: flex;
+	flex-direction: column;
+	width: 60vw;
+	margin: auto;
+	margin-top: 5vh;
+	border: 1px solid black;
+	align-items: center;
+}
+.opt_str{
+	text-align: center;
+	border: 1px solid green;
+	width: 100%;
+	margin-bottom: 10px;
+	position: relative;
+}
+.game_field{
+	text-align: center;
+	border: 1px solid red;
+	height: 539px;
+	width: 357px;
+	position: relative;
+}
+.snake{
+	background-color: grey;
+	width: 6px;
+	height:6px;
+	border: 1px solid black;
+	position: absolute;
+}
+.apl{
+	background-color: green;
+	width: 6px;
+	height:6px;
+	border: 1px solid yellow;
+	position: absolute;
+}
+.score{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.fail{
+	position: absolute;
+	top: 0;
+	right:0;
+}
