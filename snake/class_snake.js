@@ -128,7 +128,7 @@ class snakeView{
 		let className = 'apl';
 		if (!Array.isArray(obj)){
 			renderArr = obj.tail.slice();
-			renderArr.unshif t(obj.head);
+			renderArr.unshift(obj.head);
 			className = 'snake';
 		}
 		snakeView.simpleRender(renderArr,className);
