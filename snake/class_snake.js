@@ -28,7 +28,7 @@ class snake{
 		snake.number++;
 	}
 	move(){
-		if  (JSON.stringif y(this.tail.last())!==JSON.stringify(this.eatenApples[0]))
+		if  (JSON.stringify(this.tail.last())!==JSON.stringify(this.eatenApples[0]))
 			{
 				this.tail.pop();
 			}else{
