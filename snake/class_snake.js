@@ -34,7 +34,7 @@ class snake{
 			}else{
 				this.eatenApples.shift();this.tailLength++;
 			}
-		this.tail.unshif t(this.head);
+		this.tail.unshift(this.head);
 		this.head = [this.tail[0][0]+this.headDirection[0],this.tail[0][1]+this.headDirection[1]];
 	}
 
