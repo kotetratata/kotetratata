@@ -1,0 +1,30 @@
+*{
+	box-sizing: border-box;
+	cursor: default;
+}
+nav a{
+	color: #FF9800;
+	text-decoration: none;
+	font-size: 22px;
+	border: 1px solid;
+}
+nav{
+	padding: 0;
+	margin:0 auto ;
+	border: 1px solid;
+	display: flex;
+	justify-content: center;
+}
+nav>ul{
+	display: flex;
+	padding: 0;
+	margin: 0;
+	border: 1px solid;
+}
+li{
+	display: flex;
+	padding: 10px 30px;
+	flex-shrink: 0;
+	border: 1px solid;
+
+}
