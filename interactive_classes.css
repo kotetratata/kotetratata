@@ -1,0 +1,6 @@
+.slide{
+	display:none;
+}
+.active{
+	display:unset;
+}
