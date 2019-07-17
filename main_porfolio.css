@@ -15,8 +15,7 @@ nav{
 	z-index: 10;
 	width: 100%;
 	padding: 0;
-	background-color: #fff;/*////////////////////////////////////////////272727*/
-	/*margin:0 auto;//////////////*/
+	background-color: #fff;
 	border: 1px solid;
 	display: flex;
 	justify-content: center;
@@ -32,7 +31,7 @@ nav li{
 	padding: 10px 30px;
 	flex-shrink: 0;
 	border: 1px solid;
-	font-family: 'roboto';/*////////////////////////////////////////////*/
+	font-family: 'roboto';
 }
 
 .introduction{
@@ -74,19 +73,6 @@ nav li{
 .introduction button:last-of-type{
 	right: 30vw;
 }
-
-
-.portfolio{
-	position: relative;
-	width: 500px;
-	height: 500px;
-	background-color: black;
-
-}
-
-
-.personal_information{
-	height: 80vh;
-	width: 100%;
-	background-color: orange;
+button{
+	display: none;
 }

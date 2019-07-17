@@ -6,7 +6,10 @@
 	<link rel="stylesheet" href="normalize.css">
 	<link rel="stylesheet" href="main_porfolio.css">
 	<link rel="stylesheet" href="interactive_classes.css">
-	<script src="simple_slides.js"></script>
+	<link rel="stylesheet" href="cube.css">
+	<script src="cube.js"></script>
+	<script src="turnSide.js"></script>
+	<script src="parallax.js"></script>
 </head>
 <body>
 	<header>
@@ -21,59 +24,76 @@
 			</ul>
 	</nav>
 	<main>
-		<secntion name="introduction" class="introduction">
-			<article class="slide">
-				<p class="legend">Hi there!</p>
-				<p>This page was created to introduce myself to employes and coworkers.</p>
-				<div>
-					<p>So let`s begin</p>
+		<section class="cube_section">
+			<h1>Hi! This is me at first glance</h1>
+
+			<div id="parallax"></div>
+			<div class="cube_container">
+				<div id="cube">
+					<div class="side front">
+						<p class="legend">Hi there!</p>
+						<p>This page was created to introduce myself to employes and coworkers.</p>
+						<div>
+							<p>So let`s begin</p>
+						</div>
+					</div>
+					<div class="side back">
+						<p class="legend">My weakest part</p>
+						<p>
+							I don`t gave proffecional experience in IT. The only I have is two month of internship in sofona company but 
+							it was quite messy so i left it and now trying to found my place in another company.
+						</p>
+					</div>
+					<div class="side right">
+						<p class="legend">My best qualities:</p>
+						<ul>
+							<li>ability to see the whole picture;</li>
+							<li>understanding that primordial thing important;</li>
+							<li>high learning speed and good memory;</li>
+							<li>I can do literally any tasks even sometimes lack of knowledge push me to do them in unordinary ways.</li>
+						</ul>
+					</div>
+					<div class="side left">
+						<p class="legend">IT education</p>
+						<p>
+							Started from basics of Delphi and Pascal in school.
+							Later have some C++ in University. Have finished a lot of courses on "codeacademy.com" then.
+							Sometimes solving puzzles on "codingame.com".
+							
+						</p>
+					</div>
+					<div class="side top">
+						<p class="legend">Known techonogies</p>
+						<p>
+							Work a lot with front-end stuff: html,css,js.
+							Have some experience with python, GO, SQL.
+							Have worked with CMS like Joomla and Modx and a bit with technologies like Git, React.
+							Prefer to write code on pure <b>Js</b> and now trying to improve my skills in this direction.
+						</p>
+					</div>
+					<div class="side bottom">
+						<p>
+							If you interested in <b>ANY</b> work experience so I have worked as an ad adveister from 14, later as an animator in the children`s entertainment complex and a loader.
+							Also I sold stickers, cards and etc. in school years and made quizes and asseys for money in student years. So in general I can say I know a bit about how to work and how to earn.
+						</p>
+					</div>
 				</div>
-
-			</article>
-			<article class="slide">
-				<p class="legend">My best qualities:</p>
-				<ul>
-					<li>ability to see the whole picture;</li>
-					<li>understanding that primordial thing important;</li>
-					<li>high learning speed and good memory;</li>
-					<li>I can do literally any tasks even sometimes lack of knowledge push me to do them in unordinary ways.</li>
-				</ul>
-			</article>
-			<article class="slide">
-				<p class="legend">My weakest part</p>
-				<p>I don`t gave proffecional experience in IT. The only I have is two month of internship in sofona company but 
-				it was quite messy so i left it and now trying to found my place in another company.</p>
-			</article>
-			<article class="slide">
-				<p>
-					If you interested in <b>ANY</b> work experience so I have worked as an ad adveister from 14, later as an animator in the children`s entertainment complex and a loader.
-					Also I sold stickers, cards and etc. in school years and made quizes and asseys for money in student years. So in general I can say I know a bit about how to work and how to earn.
-				</p>
-			</article>
-			<article class="slide">
-				<p class="legend">IT education</p>
-				<p>
-					Started from basics of Delphi and Pascal in school.
-					Later have some C++ in University. Have finished a lot of courses on "codeacademy.com" then.
-					Sometimes solving puzzles on "codingame.com".
-					Also have some experience with python, GO, SQL.
-					Have worked with CMS like Joomla and Modx and a bit with technologies like Git, React.
-					Prefer to write code on pure <b>Js</b> and now tryin g to improve my skills in this direction.
-				</p>
-			</article>
-			<button onclick="prevSlide()">previos</button>
-			<button onclick="nextSlide()">next</button>
+			</div>
+			<div id="frontface"></div>
+			<div id="next" class="button" >next</div>
+			<div id="prev" class="button" >prev</div>
 			
-		</secntion>
+			
+		</section>
 
-		<secntion name="portfolio" class="portfolio">
+
+		<section name="portfolio" class="portfolio">
+			
+		</section>
+		<section name="personal_information" class="personal_information">
 			<div>123</div>
 			<p>123</p>
-		</secntion>
-		<secntion name="personal_information" class="personal_information">
-			<div>123</div>
-			<p>123</p>
-		</secntion>
+		</section>
 	</main>
 	<footer></footer>
 </body>
