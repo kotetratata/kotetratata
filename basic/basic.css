@@ -1,11 +1,11 @@
 nav{
-	
 	position: fixed;
 	top: 0;
 	background-color: black;
 	color: white;
 	width: 100vw;
-	height: 70px;
+
+	font-size: 24px;
 }
 nav>ul{
 	max-width: 700px;
@@ -16,8 +16,36 @@ nav>ul{
 	padding: 15px;
 }
 nav>ul>li{
-
 	display: flex;
 	padding: 10px 20px;
 	border: 1px dashed white;
+}
+@media (max-width: 550px){
+	nav{
+		font-size: 20px;
+	}
+	nav>ul{
+		padding: 10px;
+	}
+	nav>ul>li{
+		padding: 10px;
+	}
+}
+@media (max-width: 410px){
+	
+	nav{
+		font-size: 18px;
+	}
+	nav>ul{
+		padding: 10px;
+	}
+	nav>ul>li{
+		padding: 5px;
+	}
+}
+@media (max-width: 350px){
+	
+	nav{
+		font-size: 16px;
+	}
 }
