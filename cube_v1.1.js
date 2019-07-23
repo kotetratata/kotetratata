@@ -1,14 +1,17 @@
 let lastMouth;
-let degX = 0;
-let degY = 0;
-let degZ = 0;
-let quaterX = 0;
-let quaterY = 0;
-let quaterZ = 0;
-
+let deg = {
+	X:0,
+	Y:0,
+	Z:0
+}
+let quater = {
+	X:0,
+	Y:0,
+	Z:0
+}
 
 function cubeRotate() {
-	document.getElementById('cube').style.transform = "translateZ( -100px) rotateX("+degX+"deg) rotateY( "+degY+"deg) rotateZ("+degZ +"deg)";
+	document.getElementById('cube').style.transform = "translateZ( -100px) rotateX("+deg.X+"deg) rotateY( "+deg.Y+"deg) rotateZ("+deg.Z +"deg)";
 }
 
 
@@ -27,9 +30,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
 
 function paramCalc(ev) {
-	quaterX = quaterFound(degX);
-	quaterY = quaterFound(degY);
-	quaterZ = quaterFound(degZ);
+	quater.X = quaterFound(deg.X);
+	quater.Y = quaterFound(deg.Y);
+	quater.Z = quaterFound(deg.Z);
 	
 
 	let ratioXd = {
@@ -45,19 +48,15 @@ function paramCalc(ev) {
 		Y:0
 	}
 
-
-	let ratioX = 0;//////////////////
-	let ratioZ = 0;
-
-	ratioYd=ratioFound(quaterY,ratioYd);
+	ratioYd=ratioFound(quater.Y,ratioYd);
 
 
 
-	degY += 360*((ev.pageX-lastMouth[0])/document.documentElement.clientWidth);
+	deg.Y += 360*((ev.pageX-lastMouth[0])/document.documentElement.clientWidth);
 
-	degX -= ratioYd.X*360*((ev.pageY-lastMouth[1])/document.documentElement.clientHeight);
+	deg.X -= ratioYd.X*360*((ev.pageY-lastMouth[1])/document.documentElement.clientHeight);
 
-	degZ -= ratioYd.Z*360*((ev.pageY-lastMouth[1])/document.documentElement.clientHeight);
+	deg.Z -= ratioYd.Z*360*((ev.pageY-lastMouth[1])/document.documentElement.clientHeight);
 
 	lastMouth = [ev.pageX,ev.pageY];
 	
@@ -67,7 +66,23 @@ function paramCalc(ev) {
 
 
 function quaterFound(angle) {
-	return ((angle%360)+360)%360;
+	const curAngle = ((angle%360)+360)%360;
+	if (curAngle >= 0 && curAngle<90){
+		return 1;
+	}else{
+		if (curAngle<180) {
+			return 2;
+		}
+		else{
+			if (curAngle<270) {
+				return 3;
+			}
+			else{
+				return 4;
+			}
+		}
+	}
+	
 }
 function ratioFound(angle,obj) {
 
