@@ -1,7 +1,7 @@
 let lastMouth;
-let degX = 0;
-let degY = 0;
-let degZ = 0;
+let degX = -14;
+let degY = 27;
+let degZ = -3;
 let quaterX = 0;
 let quaterY = 0;
 let quaterZ = 0;
@@ -14,6 +14,9 @@ function cubeRotate() {
 
 
 document.addEventListener("DOMContentLoaded", ()=>{
+
+	document.getElementById('cube').style.transform = "translateZ( -100px) rotateX("+degX+"deg) rotateY( "+degY+"deg) rotateZ("+degZ +"deg)";
+
 	document.addEventListener("mousedown",(ev)=>{
 		lastMouth = [ev.pageX,ev.pageY];
 		document.addEventListener("mousemove", paramCalc);
