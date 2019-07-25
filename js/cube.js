@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
 function paramCalc(ev) {
 	let x = ev.pageX || ev.touches[0].clientX,
-		y = ev.pageY || ev.touches[0].clientX;
+		y = ev.pageY || ev.touches[0].clientY;
 	console.log(x+' '+y);
 	quaterX = quaterFound(degX);
 	quaterY = quaterFound(degY);
