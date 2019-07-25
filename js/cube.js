@@ -5,6 +5,7 @@ let degZ = 0;
 let quaterX = 0;
 let quaterY = 0;
 let quaterZ = 0;
+let area;
 
 
 function cubeRotate() {
@@ -23,10 +24,24 @@ document.addEventListener("DOMContentLoaded", ()=>{
 		document.removeEventListener("mousemove", paramCalc);
 	})
 
+	document.addEventListener("touchstart",(ev)=>{
+		area = 'touch'
+		lastMouth = [ev.touches[0].clientX,ev.touches[0].clientX];
+		document.addEventListener("touchmove", paramCalc);
+	})
+	
+	document.addEventListener("touchend",()=>{
+		area = 'touch'
+		document.removeEventListener("touchmove", paramCalc);
+	})
+
 });
 
 
 function paramCalc(ev) {
+	let x = ev.pageX || ev.touches[0].clientX,
+		y = ev.pageY || ev.touches[0].clientX;
+	console.log(x+' '+y);
 	quaterX = quaterFound(degX);
 	quaterY = quaterFound(degY);
 	quaterZ = quaterFound(degZ);
@@ -53,13 +68,13 @@ function paramCalc(ev) {
 
 
 
-	degY += 360*((ev.pageX-lastMouth[0])/document.documentElement.clientWidth);
+	degY += 360*((x-lastMouth[0])/document.documentElement.clientWidth);
 
-	degX -= ratioYd.X*360*((ev.pageY-lastMouth[1])/document.documentElement.clientHeight);
+	degX -= ratioYd.X*360*((y-lastMouth[1])/document.documentElement.clientHeight);
 
-	degZ -= ratioYd.Z*360*((ev.pageY-lastMouth[1])/document.documentElement.clientHeight);
+	degZ -= ratioYd.Z*360*((y-lastMouth[1])/document.documentElement.clientHeight);
 
-	lastMouth = [ev.pageX,ev.pageY];
+	lastMouth = [x,y];
 	
 	cubeRotate();
 
