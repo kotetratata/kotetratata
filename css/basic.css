@@ -1,5 +1,15 @@
+@font-face{
+	font-family: not_remember;
+	src: url('../fonts/Crystal.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
 body{
 	color:white;
+	font-family: not_remember;
+}
+img{
+	max-width: 100%;
 }
 .hidden{
 	display: none;
@@ -224,19 +234,20 @@ nav>ul>li:hover :before,nav>ul>li:hover :after{
 	background-color:#230041;
 	background-image:url(../img/side_bg.png);
 	background-repeat: no-repeat;
-	-webkit-background-size: 50%;
+	-webkit-background-size: 90%;
 	background-size: 90%;
 	background-position:bottom;
 
-	font: normal 30px Arial;
+	font: normal 30px;
 	text-align: center;
-	color: #fff;
 	backface-visibility: hidden;
+
 	border: 20px solid transparent;
 	-moz-border-image: -moz-linear-gradient(top left, #824FD1 0%, #26034D 100%);
 	-webkit-border-image: -webkit-linear-gradient(top left, #824FD1 0%, #26034D 100%);
 	border-image: linear-gradient(to bottom right, #824FD1 0%, #26034D 100%);
 	border-image-slice: 1;
+
 	pointer-events: none;
 }
 
