@@ -5,7 +5,6 @@ let degZ = 0;
 let quaterX = 0;
 let quaterY = 0;
 let quaterZ = 0;
-let area;
 
 
 function cubeRotate() {
@@ -25,13 +24,12 @@ document.addEventListener("DOMContentLoaded", ()=>{
 	})
 
 	document.addEventListener("touchstart",(ev)=>{
-		area = 'touch'
 		lastMouth = [ev.touches[0].clientX,ev.touches[0].clientX];
 		document.addEventListener("touchmove", paramCalc);
 	})
 	
 	document.addEventListener("touchend",()=>{
-		area = 'touch'
+
 		document.removeEventListener("touchmove", paramCalc);
 	})
 
@@ -39,9 +37,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
 
 function paramCalc(ev) {
+
 	let x = ev.pageX || ev.touches[0].clientX,
 		y = ev.pageY || ev.touches[0].clientY;
-	console.log(x+' '+y);
 	quaterX = quaterFound(degX);
 	quaterY = quaterFound(degY);
 	quaterZ = quaterFound(degZ);
