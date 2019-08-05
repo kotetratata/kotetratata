@@ -11,12 +11,15 @@
 	<script src="js/cube.js"></script>
 	<script src="js/parallax.js"></script>
 	<script src="js/turnSide.js"></script>
+	<script src="js/pdfResizer.js"></script>
+	<script src="js/header.js"></script>
+	<script src="js/footer.js"></script>
 </head>
 <body>
 	<header>
 		<nav>
 			<ul>
-				<li><a href="#introduction">introduction</a></li>
+				<li><a class="active" href="#introduction">introduction</a></li>
 				<li><a href="#projects">portfolio projects</a></li>
 				<li><a href="#biography">biography</a></li>
 			</ul>
@@ -42,7 +45,7 @@
 						<p class="legend">My weakest part:</p>
 						<p>
 							I don`t have proffesional experience in IT. The only I had is two month of internship in sofona company but 
-							it was quite messy for me so I left it and now trying to found my place in another company.
+							it was quite messy for me so I left it and now trying to find my place in another company.
 						</p>
 					</div>
 					<div class="side right">
@@ -96,10 +99,46 @@
 
 
 		<section id="biography" name="biography">
-			
+			<div class="link">
+				<p>You can download <a href="../CV/CV.docx" download="">TXT format</a> or a PDF shown lower</p>
+				<div id="pdfField"></div>
+			</div>
 		</section>
 	</main>
-	<footer></footer>
+	<footer>
+		<div id="common">
+			<div id="rise_button"></div>
+			<p>some contacts hidding there</p>
+		</div>
+		<div id="hidden" class="hidden">
+			<div id="cut_button"></div>
+			<p>some specific info about contacts</p>
+			<div class="contacts">
+				<ul>
+					<li>
+						<div class="icon"><img src="" alt=""></div>
+						<p>0937105266</p>
+					</li>
+					<li>
+						<div class="icon"><img src="" alt=""></div>
+						<p>kotetratata@gmail.com</p>
+					</li>
+					<li>
+						<div class="icon"><img src="" alt=""></div>
+						<p>kotetratata</p>
+					</li>
+					<li>
+						<div class="icon"><img src="" alt=""></div>
+						<p>0937105266</p>
+					</li>
+					<li>
+						<div class="icon"><img src="" alt=""></div>
+						<p>0937105266</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</footer>
 	
 </body>
 </html>
