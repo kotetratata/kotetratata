@@ -208,14 +208,14 @@ nav>ul>li>.active:after{
 #cube_container {
 	position: relative;
 	margin: 150px auto;
-	margin-top: 150px;
+	margin-top: 70px;
 	width: 500px;
 	height: 500px;
 	perspective: 1000px;
 }
 @media (max-width: 1000px){
 	#cube_container {
-		margin-top: 100px;
+		margin-top: 50px;
 		margin-bottom: 200px;
 	}
 }
@@ -625,6 +625,14 @@ footer>#common>p{
 	top:15px;
 	border: 12px solid transparent;
 	border-top: 12px solid #6733B9;
+}
+#hidden>p{
+	width: 500px;
+	position: relative;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
 }
 footer>#hidden{
 	display: flex;
