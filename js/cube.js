@@ -5,35 +5,37 @@ let degZ = -3;
 let quaterX = 0;
 let quaterY = 0;
 let quaterZ = 0;
+let cube = document.getElementById('cube');
+let introduction = document.getElementById('introduction');
 
 
 function cubeRotate() {
-	document.getElementById('cube').style.transform = "translateZ( -100px) rotateX("+degX+"deg) rotateY( "+degY+"deg) rotateZ("+degZ +"deg)";
+	cube.style.transform = "translateZ( -100px) rotateX("+degX+"deg) rotateY( "+degY+"deg) rotateZ("+degZ +"deg)";
 }
 
 
 
 document.addEventListener("DOMContentLoaded", ()=>{
 
-	document.getElementById('cube').style.transform = "translateZ( -100px) rotateX("+degX+"deg) rotateY( "+degY+"deg) rotateZ("+degZ +"deg)";
+	cube.style.transform = "translateZ( -100px) rotateX("+degX+"deg) rotateY( "+degY+"deg) rotateZ("+degZ +"deg)";
 
-	document.addEventListener("mousedown",(ev)=>{
+	introduction.addEventListener("mousedown",(ev)=>{
 		lastMouth = [ev.pageX,ev.pageY];
-		document.addEventListener("mousemove", paramCalc);
+		introduction.addEventListener("mousemove", paramCalc);
 	})
 	
-	document.addEventListener("mouseup",()=>{
-		document.removeEventListener("mousemove", paramCalc);
+	introduction.addEventListener("mouseup",()=>{
+		introduction.removeEventListener("mousemove", paramCalc);
 	})
 
-	document.addEventListener("touchstart",(ev)=>{
+	introduction.addEventListener("touchstart",(ev)=>{
 		lastMouth = [ev.touches[0].clientX,ev.touches[0].clientX];
-		document.addEventListener("touchmove", paramCalc);
+		introduction.addEventListener("touchmove", paramCalc);
 	})
 	
-	document.addEventListener("touchend",()=>{
+	introduction.addEventListener("touchend",()=>{
 
-		document.removeEventListener("touchmove", paramCalc);
+		introduction.removeEventListener("touchmove", paramCalc);
 	})
 
 });
