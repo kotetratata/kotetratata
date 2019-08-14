@@ -16,7 +16,7 @@ function cubeRotate() {
 
 
 document.addEventListener("DOMContentLoaded", ()=>{
-
+		alert('the site is only at the initial stage of development')
 	cube.style.transform = "translateZ( -100px) rotateX("+degX+"deg) rotateY( "+degY+"deg) rotateZ("+degZ +"deg)";
 
 	introduction.addEventListener("mousedown",(ev)=>{
