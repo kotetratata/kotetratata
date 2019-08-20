@@ -14,16 +14,14 @@
 	})
 
 	document.getElementById('projects').addEventListener('mousedown',(ev)=>{
-		let limit
-		let mouse
-		if(screenRatio){
-			limit = web.offsetWidth;
-			mouse = ev.pageX;
-		}else{
-			limit = noweb.offsetHeight;
-			mouse = ev.pageY;
+
+		let limit = screenRatio ? web.offsetWidth : web.offsetHeight;
+		let mouse = screenRatio ? ev.pageX : ev.pageY;
+
+
+		if( !( mouse < limit + 130 && mouse > limit - 130 )){
+			return
 		}
-		if((mouse>(limit+130))||(mouse<(limit-130))){console.log('worked');return}
 
 		addEventListener('mousemove',resizeProjects)
 	})
