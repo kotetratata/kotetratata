@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 	})
 	setTimeout(()=>{
 		alert('the site is only at the initial stage of development')
-	}, 0);
+	}, 1000);
 	
 });
 
