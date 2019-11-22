@@ -37,9 +37,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
 		introduction.removeEventListener("touchmove", paramCalc);
 	})
-	setTimeout(()=>{
-		alert('the site is only at the initial stage of development')
-	}, 1000);
+
 	
 });
 
