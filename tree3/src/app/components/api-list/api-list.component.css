@@ -1,0 +1,20 @@
+.category-list {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+.category-list__item {
+  cursor: pointer;
+  color: #000933;
+  user-select: none;
+}
+.category-list__item:hover {
+  color: dodgerblue;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

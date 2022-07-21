@@ -1,0 +1,3 @@
+<ng-container *ngIf="selectedData.selectedCategoryList|async as apiList">
+  <div class="api-item" *ngFor="let api of apiList.entries">{{api.API}}</div>
+</ng-container>
