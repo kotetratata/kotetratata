@@ -1,0 +1,3 @@
+[submodule "check"]
+	path = check
+	url = https://github.com/kotetratata/vue-heroes.git
