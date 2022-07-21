@@ -1,0 +1,12 @@
+<div class="wrapper">
+  <ol class="category-list">
+    <li class="category-list__item"
+        *ngFor="let category of list|async"
+        (click)="selectCategory($event)"
+    >
+      {{category}}
+    </li>
+  </ol>
+</div>
+
+
